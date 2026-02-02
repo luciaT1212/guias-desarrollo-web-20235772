@@ -1,17 +1,35 @@
-export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) => {
+export const Header = ({
+  cart,
+  total,
+  increase,
+  decrease,
+  remove,
+  vaciarCart
+}) => {
   return (
     <header className="py-5 header">
       <div className="container-xl">
         <div className="row justify-content-center justify-content-md-between">
+          
+          {/* LOGO */}
           <div className="col-8 col-md-3">
             <a href="/">
-              <img className="img-fluid" src="/img/logo.svg" alt="logo" />
+              <img
+                className="img-fluid"
+                src={`${import.meta.env.BASE_URL}img/logo.svg`}
+                alt="logo"
+              />
             </a>
           </div>
 
+          {/* CARRITO */}
           <nav className="col-md-6 mt-5 d-flex align-items-start justify-content-end">
             <div className="carrito">
-              <img className="img-fluid" src="/img/carrito.png" alt="carrito" />
+              <img
+                className="img-fluid"
+                src={`${import.meta.env.BASE_URL}img/carrito.png`}
+                alt="carrito"
+              />
 
               <div id="carrito" className="bg-white p-3">
                 {cart.length === 0 ? (
@@ -35,7 +53,7 @@ export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) 
                             <td>
                               <img
                                 className="img-fluid"
-                                src={`/img/${guitar.image}.jpg`}
+                                src={`${import.meta.env.BASE_URL}img/${guitar.image}.jpg`}
                                 alt={guitar.name}
                               />
                             </td>
@@ -75,7 +93,8 @@ export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) 
                     </table>
 
                     <p className="text-end">
-                      Total pagar: <span className="fw-bold">${total}</span>
+                      Total pagar:{" "}
+                      <span className="fw-bold">${total}</span>
                     </p>
 
                     <button
