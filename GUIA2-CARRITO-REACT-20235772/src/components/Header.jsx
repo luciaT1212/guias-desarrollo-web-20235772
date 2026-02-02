@@ -1,19 +1,10 @@
-export const Header = ({
-  cart,
-  total,
-  increase,
-  decrease,
-  remove,
-  vaciarCart
-}) => {
+export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) => {
   return (
     <header className="py-5 header">
       <div className="container-xl">
         <div className="row justify-content-center justify-content-md-between">
-          
-          {/* LOGO */}
           <div className="col-8 col-md-3">
-            <a href="/">
+            <a href="#">
               <img
                 className="img-fluid"
                 src={`${import.meta.env.BASE_URL}img/logo.svg`}
@@ -22,7 +13,6 @@ export const Header = ({
             </a>
           </div>
 
-          {/* CARRITO */}
           <nav className="col-md-6 mt-5 d-flex align-items-start justify-content-end">
             <div className="carrito">
               <img
@@ -93,8 +83,7 @@ export const Header = ({
                     </table>
 
                     <p className="text-end">
-                      Total pagar:{" "}
-                      <span className="fw-bold">${total}</span>
+                      Total pagar: <span className="fw-bold">${total}</span>
                     </p>
 
                     <button
@@ -113,3 +102,4 @@ export const Header = ({
     </header>
   );
 };
+
