@@ -6,21 +6,15 @@ export function Guitar({ guitar, addToCart }) {
       <div className="col-4">
         <img
           className="img-fluid"
-          src={`${import.meta.env.BASE_URL}img/${image}.jpg`}
-          alt={`guitarra ${name}`}
+          src={import.meta.env.BASE_URL + `img/${image}.jpg`}
+          alt={`Guitarra ${name}`}
         />
       </div>
 
       <div className="col-8">
-        <h3 className="text-black fs-4 fw-bold text-uppercase">
-          {name}
-        </h3>
-
+        <h3 className="text-black fs-4 fw-bold text-uppercase">{name}</h3>
         <p>{description}</p>
-
-        <p className="fw-black text-primary fs-3">
-          ${price}
-        </p>
+        <p className="fw-black text-primary fs-3">${price}</p>
 
         <button
           type="button"
