@@ -1,4 +1,11 @@
-export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) => {
+export const Header = ({
+  cart,
+  total,
+  increaseQuantity,
+  decreaseQuantity,
+  removeFromCart,
+  clearCart,
+}) => {
   return (
     <header className="py-5 header">
       <div className="container-xl">
@@ -53,7 +60,7 @@ export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) 
                               <button
                                 type="button"
                                 className="btn btn-dark"
-                                onClick={() => decrease(guitar.id)}
+                                onClick={() => decreaseQuantity(guitar.id)}
                               >
                                 -
                               </button>
@@ -63,7 +70,7 @@ export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) 
                               <button
                                 type="button"
                                 className="btn btn-dark"
-                                onClick={() => increase(guitar.id)}
+                                onClick={() => increaseQuantity(guitar.id)}
                               >
                                 +
                               </button>
@@ -72,7 +79,7 @@ export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) 
                               <button
                                 className="btn btn-danger"
                                 type="button"
-                                onClick={() => remove(guitar.id)}
+                                onClick={() => removeFromCart(guitar.id)}
                               >
                                 X
                               </button>
@@ -88,7 +95,7 @@ export const Header = ({ cart, total, increase, decrease, remove, vaciarCart }) 
 
                     <button
                       className="btn btn-dark w-100 mt-3 p-2"
-                      onClick={vaciarCart}
+                      onClick={clearCart}
                     >
                       Vaciar Carrito
                     </button>
