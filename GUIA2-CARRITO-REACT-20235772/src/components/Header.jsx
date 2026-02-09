@@ -56,6 +56,7 @@ export const Header = ({
                             </td>
                             <td>{guitar.name}</td>
                             <td className="fw-bold">${guitar.price}</td>
+
                             <td className="d-flex align-items-start gap-4">
                               <button
                                 type="button"
@@ -75,6 +76,7 @@ export const Header = ({
                                 +
                               </button>
                             </td>
+
                             <td>
                               <button
                                 className="btn btn-danger"
@@ -109,4 +111,5 @@ export const Header = ({
     </header>
   );
 };
+
 
